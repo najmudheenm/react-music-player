@@ -10,6 +10,17 @@ function LibrarySong({
 }) {
   const songSelectingHandler = async () => {
     await setCurrentSong(song);
+    const newSong = songs.map((listSong) => {
+      if (listSong.id === song.id) {
+        return {
+          ...listSong,
+          active: true,
+        };
+      } else {
+        return { ...listSong, active: false };
+      }
+    });
+    setSongs(newSong);
     if (play) audioRef.current.play();
   };
 
