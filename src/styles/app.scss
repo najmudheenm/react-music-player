@@ -1,0 +1,29 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+  }
+  .active {
+    background-color: pink;
+  }
+}
+.App {
+  transition: all 0.3s ease;
+}
+.library-active {
+  margin-left: 30%;
+}
+@import "./player";
+@import "./songs";
+@import "./library";
+@import "./nav";
